@@ -17,6 +17,7 @@ func main() {
 
 	http.HandleFunc("/", logMw(home))
 	http.HandleFunc("/history", logMw(history))
+
 	log.Println("Server running on port:", port)
 	log.Fatal(http.ListenAndServe(port, nil))
 }
